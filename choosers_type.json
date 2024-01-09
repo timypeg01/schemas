@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/choosers.json",
+  "settings": {
+    "name": "QA Choosers",
+    "label": "Choosers",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://vignette.wikia.nocookie.net/disney/images/2/27/Goofy_transparent.png/revision/latest?cb=20170426165903"
+      }
+    ]
+  }
+}

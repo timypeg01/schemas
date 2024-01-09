@@ -1,0 +1,100 @@
+{
+  "allOf" : [ {
+    "$ref" : "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+  } ],
+  "propertyOrder" : [ "image", "editorial", "aspectRatio" ],
+  "$schema" : "http://bigcontent.io/cms/schema/v1/schema#",
+  "description" : "A page block element that can display an image, a text overlay and a call to action",
+  "id" : "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/image-block.json",
+  "title" : "Image Block",
+  "type" : "object",
+  "properties" : {
+    "editorial" : {
+      "propertyOrder" : [ "title", "text", "callToAction", "useParentAsCtaHotspot", "overlayAlignment", "overlayTheme", "alignCopyText" ],
+      "description" : "editorial text for use in an overlay or small panel",
+      "type" : "object",
+      "title" : "Editorial",
+      "properties" : {
+        "useParentAsCtaHotspot" : {
+          "description" : "when true, the full area of the parent block will be clickable",
+          "type" : "boolean",
+          "title" : "Parent Container is Call To Action Hotspot"
+        },
+        "overlayTheme" : {
+          "description" : "choose a theme for the editorial text (default is 'None')",
+          "type" : "string",
+          "title" : "Overlay Theme",
+          "enum" : [ "None", "Darken", "Lighten" ]
+        },
+        "text" : {
+          "minLength" : 0,
+          "format" : "text",
+          "description" : "editorial copy to display as a layer over the background image, or in an adjacent block",
+          "type" : "string",
+          "title" : "Editorial Text",
+          "maxLength" : 512
+        },
+        "title" : {
+          "minLength" : 0,
+          "format" : "text",
+          "description" : "optional header text to display above the editorial text",
+          "type" : "string",
+          "title" : "Editorial Title",
+          "maxLength" : 100
+        },
+        "alignCopyText" : {
+          "description" : "choose editorial text alignment (default is 'center')",
+          "type" : "string",
+          "title" : "Align Copy Text",
+          "enum" : [ "left", "right", "center" ]
+        },
+        "overlayAlignment" : {
+          "description" : "Hints to the UI where the overlay alignment would be best for the underlying media",
+          "type" : "string",
+          "title" : "Overlay Alignment",
+          "enum" : [ "Top Left", "Top Right", "Bottom Left", "Bottom Right", "Center" ]
+        },
+        "callToAction" : {
+          "propertyOrder" : [ "text", "url" ],
+          "type" : "object",
+          "title" : "Call to Action",
+          "properties" : {
+            "text" : {
+              "minLength" : 0,
+              "format" : "text",
+              "type" : "string",
+              "title" : "Action Text",
+              "maxLength" : 155
+            },
+            "url" : {
+              "format" : "uri",
+              "description" : "an absolute or relative url to link to from the call to action",
+              "type" : "string",
+              "title" : "Action Url"
+            }
+          }
+        }
+      }
+    },
+    "image" : {
+      "$ref" : "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "aspectRatio" : {
+      "propertyOrder" : [ "w", "h" ],
+      "type" : "object",
+      "title" : "Aspect Ratio",
+      "properties" : {
+        "w" : {
+          "description" : "the width component of an aspect ratio w:h",
+          "type" : "integer",
+          "title" : "w"
+        },
+        "h" : {
+          "description" : "the height component of an aspect ratio w:h",
+          "type" : "integer",
+          "title" : "h"
+        }
+      }
+    }
+  }
+}

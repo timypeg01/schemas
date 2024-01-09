@@ -1,0 +1,25 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "description": "Invalid chooser type link content type",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/invalid-link.json",
+  "title": "Invalid chooser type link",
+  "type": "object",
+  "properties": {
+    "oneInvalid": {
+      "anyOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/banana-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        }
+      ],
+      "description": "six list oneOf image video",
+      "title": "has an invalid chooser type",
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/blog.json",
+  "settings": {
+    "name": "QA Blog",
+    "label": "Blog Example",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://groupsdirect.co.uk/wp-content/uploads/2016/12/blog-success.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser-list-2.json",
+  "title": "Chooser list",
+  "description": "Chooser list schema",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "required": [
+    "chooserList1",
+    "chooserList2",
+    "chooserList3",
+    "chooserList4",
+    "chooser"
+  ],
+  "properties": {
+    "test1": {
+      "title": "Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+      "type": "string",
+      "description": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+    },
+    "test2": {
+      "title": "A very long title that should wrap when vse is at full width Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+      "type": "string",
+      "description": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+    },
+    "chooserList1": {
+      "title": "Chooser list with min items 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 2
+    },
+    "chooserList2": {
+      "title": "Chooser list with max 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 2
+    },
+    "chooserList3": {
+      "title": "Chooser list with max 5 min 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 5,
+      "minItems": 2
+    },
+    "chooserList4": {
+      "title": "Chooser list with no min/max or required",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "chooserList5": {
+      "title": "Chooser list with no min and not required",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "chooser": {
+      "title": "Chooser",
+      "type": "object",
+      "description": "A chooser",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "title",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

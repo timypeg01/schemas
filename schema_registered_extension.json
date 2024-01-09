@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://qa-patrick.s3-eu-west-1.amazonaws.com/schemas/content/type/schema_registered_extension.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"propertyName1": {
+			"type": "string",
+			"ui:extension": {
+			"name": "working-extension-example"
+			}
+		}
+		
+	},
+	"propertyOrder": []
+}

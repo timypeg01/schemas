@@ -1,0 +1,118 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser-list.json",
+  "title": "Chooser list",
+  "description": "Chooser list schema",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "chooserList1": {
+      "title": "Chooser list with min items 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 2
+    },
+    "chooserList2": {
+      "title": "Chooser list with max 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 2
+    },
+    "chooserList3": {
+      "title": "Chooser list with max 5 min 2",
+      "description": "A chooser list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Chooser list",
+        "description": "A chooser list",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "title",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 5,
+      "minItems": 2
+    },
+    "chooser": {
+      "title": "Chooser",
+      "type": "object",
+      "description": "A chooser",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "title",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+              ]
+            }
+          }
+        }
+      ],
+      "minItems": 2
+    }
+  }
+}

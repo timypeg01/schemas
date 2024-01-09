@@ -1,0 +1,57 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/nested.json",
+  "title": "One of each",
+  "description": "All supported format validations",
+  "type": "object",
+  "properties": {
+    "primitiveList": {
+      "type": "array",
+      "title": "primitive",
+      "description": "description",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "title": "primitive item"
+      }
+    },
+    "nestedList": {
+      "type": "array",
+      "items": {
+        "$ref": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json",
+        "title": "nested item"
+      },
+      "uniqueItems": true,
+      "minItems": 1,
+      "title": "nested",
+      "description": "description"
+    },
+    "chooserList": {
+      "title": "Array with minItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Filtered content",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Filtered content props",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    }
+  }
+}

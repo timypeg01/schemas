@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/content_vlatysh/content/type/contentbasic01.json",
+  "settings": {
+    "name": "ContentItem",
+    "label": "Item",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://tbsila.cdn.turner.com/toonla/images/cnapac/content/2015/link/ben-10-up-to-speed/au/b10_uptospeed---266x266.jpg"
+      }
+    ]
+  }
+}

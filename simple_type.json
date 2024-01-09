@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json",
+  "settings": {
+    "name": "QA Simple",
+    "label": "Simple",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://www.simple.com/assets/images/simple-logo.png"
+      }
+    ]
+  }
+}

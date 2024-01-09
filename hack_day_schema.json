@@ -1,0 +1,75 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/hack_day_schema.json",
+
+  "title": "hack_day_schema",
+  "description": "Hack Day Schema for Automated Tests",
+
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type": "object",
+
+  "propertyOrder": [
+    "text_field_01",
+    "text_field_02",
+    "text_field_03",
+    "number_field_01",
+    "bool_field_01",
+    "string_array_01"
+  ],
+
+  "required": [
+    "text_field_03"
+  ],
+
+  "properties": {
+
+    "text_field_01": {
+      "type": "string",
+      "title": "Text 01",
+      "description": "First text field with no validation"
+    },
+
+    "text_field_02": {
+      "type": "string",
+      "title": "Text 02",
+      "description": "Max validation 7 chars",
+      "maxLength": 7
+    },
+
+    "text_field_03": {
+      "type": "string",
+      "title": "Text 03",
+      "description": "No validation but required"
+    },
+
+    "number_field_01": {
+      "type": "number",
+      "title": "Number 01",
+      "description": "Multiple of 7",
+      "multipleOf": 7
+    },
+
+    "bool_field_01": {
+      "type": "boolean",
+      "title": "Boolean",
+      "description": "its a boolean"
+    },
+
+    "string_array_01": {
+      "type": "array",
+      "title": "Array of Min 7 Length Strings with Min 3 Items",
+      "minItems": 3,
+      "items": {
+        "type": "string",
+        "title": "Text In Array",
+        "description": "Min validation 7 chars",
+        "minLength": 7
+      }
+    }
+  }
+}

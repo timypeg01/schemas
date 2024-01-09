@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/new-choosers-type.json",
+  "settings": {
+    "name": "QA New Chooser Type",
+    "label": "New Chooser type",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.trbimg.com/img-573a089a/turbine/ct-homer-simpson-live-pizza-debate-met-0517-20160516"
+      }
+    ]
+  }
+}

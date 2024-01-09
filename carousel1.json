@@ -1,0 +1,40 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/carousel1.json",
+  "title": "Carousel",
+  "description": "A carousel schema",
+  "type": "object",
+  "properties": {
+    "carousel": {
+      "title": "Carousel",
+      "description": "Carousel description",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Carousel",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Carousel",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slot.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/non-existent.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uniqueItems": true,
+      "maxItems": 6,
+      "minItems": 1
+    }
+  }
+}

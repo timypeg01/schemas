@@ -1,0 +1,102 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/choosers-main.json",
+  "title": "All links",
+  "description": "All built in link types",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "anyImage1": {
+      "type": "object",
+      "title": "any image 1 - root",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "anyImage2": {
+      "type": "object",
+      "title": "any image 2 - root",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "anyVideo": {
+      "type": "object",
+      "title": "any video root",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        }
+      ]
+    },
+    "anyMedia": {
+      "title": "any media",
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        }
+      ]
+    },
+    "filteredContent": {
+      "type": "object",
+      "title": "filtered - root",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "filtered",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "mixedContent": {
+      "title": "mixed",
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+            },
+            {
+              "properties": {
+                "contentType": {
+                  "title": "mixed",
+                  "enum": [
+                    "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json",
+                    "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slot-type.json"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

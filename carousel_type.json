@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/carousel.json",
+  "settings": {
+    "name": "QA Carousel",
+    "label": "Carousel Example",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.ldoceonline.com/media/english/illustration/carousel.jpg"
+      }
+    ]
+  }
+}

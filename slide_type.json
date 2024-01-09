@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+  "settings": {
+    "name": "QA Slide",
+    "label": "Slide",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://media.4rgos.it/i/Argos/9108453_R_Z001A_UC1503377?$Web$&w=570&h=513"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/choosers-main.json",
+  "settings": {
+    "name": "QA Choosers main",
+    "label": "Choosers main",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://vignette.wikia.nocookie.net/tinytoons/images/3/36/Yosemite-sam.gif/revision/latest/scale-to-width-down/250?cb=20101115213657"
+      }
+    ]
+  }
+}

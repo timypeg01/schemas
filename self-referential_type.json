@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/self-referential.json",
+  "settings": {
+    "name": "QA self-referential",
+    "label": "self-referential",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://i.ytimg.com/vi/7iZpNT3vuUA/maxresdefault.jpg"
+      }
+    ]
+  }
+}

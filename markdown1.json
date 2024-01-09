@@ -1,0 +1,15 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/markdown1.json",
+  "title": "One of each",
+  "description": "All supported format validations",
+  "type": "object",
+  "properties": {
+    "markdown": {
+      "title": "markdown",
+      "description": "should accept any string value",
+      "type": "string",
+      "format": "markdown"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/nested.json",
+  "settings": {
+    "name": "QA nested",
+    "label": "nested",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://suprb.com/apps/nested/nested.png"
+      }
+    ]
+  }
+}

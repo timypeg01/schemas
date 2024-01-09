@@ -1,0 +1,36 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/unique-min.json",
+  "title": "One of each",
+  "description": "All supported format validations",
+  "type": "object",
+  "properties": {
+    "chooserList": {
+      "title": "Array with minItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Filtered content",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Filtered content props",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/super-simple.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 2,
+      "maxItems": 3
+    }
+  }
+}

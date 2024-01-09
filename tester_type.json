@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/tester.json",
+  "settings": {
+    "name": "QA tester",
+    "label": "markdown label",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.cartoon-clipart.co/amp/images/scooby-doo5.png"
+      }
+    ]
+  }
+}

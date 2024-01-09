@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/items-tester-2.json",
+  "settings": {
+    "name": "QA Items tester 2",
+    "label": "Items tester 2",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://costumeplaybook.com/wp-content/uploads/2017/02/Peter-Perfect-Wacky-Races-Costume.jpg"
+      }
+    ]
+  }
+}

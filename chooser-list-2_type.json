@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser-list-2.json",
+  "settings": {
+    "name": "QA Chooser List",
+    "label": "Alt 02 list of choosers",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://vignette.wikia.nocookie.net/the-kennel/images/3/30/Pluto.jpg/revision/latest?cb=20130517032433"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/text-area.json",
+  "settings": {
+    "name": "QA text area",
+    "label": "Text Area",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.cbr.com/wp-content/uploads/spinoff/2016/04/marge5.jpg"
+      }
+    ]
+  }
+}

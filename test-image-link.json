@@ -1,0 +1,20 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/test-image-link.json",
+  "title": "Example",
+  "description": "Example description",
+  "type": "object",
+  "properties": {
+    "imageLink": {
+      "title": "image",
+      "allOf": [
+        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" },
+        {
+          "title": "image",
+          "description": "image",
+          "type": "object"
+        }
+      ]
+    }
+  }
+}

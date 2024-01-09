@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/invalid-link.json",
+  "settings": {
+    "name": "QA Invalid Link",
+    "label": "Invalid Link",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://previews.123rf.com/images/chrisdorney/chrisdorney1411/chrisdorney141100155/34073570-INVALID-red-Rubber-Stamp-over-a-white-background--Stock-Photo.jpg"
+      }
+    ]
+  }
+}

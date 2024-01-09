@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://qa-patrick.s3.eu-west-1.amazonaws.com/schemas/content/type/hierarchy.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+
+	"trait:hierarchy": {
+		"childContentTypes":[
+			"https://qa-patrick.s3.eu-west-1.amazonaws.com/schemas/content/type/hierarchy.json"
+		]
+	},
+	
+	"type": "object",
+	"properties": {
+		"propertyName1": {
+			"title": "title",
+			"description": "description",
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 10
+		}
+		
+	},
+	"propertyOrder": []
+}

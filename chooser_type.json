@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser.json",
+  "settings": {
+    "name": "QA Chooser Type",
+    "label": "Chooser type for simple content",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607"
+      }
+    ]
+  }
+}

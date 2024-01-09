@@ -1,0 +1,168 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "description": "A mixed content schema",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/mixed-content-tests-1.json",
+  "title": "Mixed content",
+  "type": "object",
+  "properties": {
+    "six": {
+      "oneOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/banana-link"
+        },
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        }
+      ],
+      "description": "six list oneOf image video",
+      "title": "six",
+      "type": "object"
+    },
+    "four": {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+    },
+    "one": {
+      "maxItems": 3,
+      "description": "one list",
+      "title": "one",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          },
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+          },
+          {
+            "allOf": [
+              {
+                "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+              },
+              {
+                "properties": {
+                  "contentType": {
+                    "title": "Carousel",
+                    "enum": [
+                      "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                      "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "type": "object",
+        "title": "one list anyOf all"
+      }
+    },
+    "seven": {
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-a"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "Carousel",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+              ]
+            }
+          }
+        }
+      ],
+      "description": "seven invalid",
+      "title": "seven",
+      "type": "object"
+    },
+    "two": {
+      "minItems": 3,
+      "description": "two list oneOf all",
+      "title": "two",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+          },
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+          },
+          {
+            "allOf": [
+              {
+                "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+              },
+              {
+                "properties": {
+                  "contentType": {
+                    "title": "Carousel",
+                    "enum": [
+                      "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                      "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "description": "two list oneOf all",
+        "title": "two"
+      }
+    },
+    "three": {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "five": {
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "Carousel",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+              ]
+            }
+          }
+        }
+      ],
+      "description": "two allOf link",
+      "title": "five",
+      "type": "object"
+    },
+    "eight": {
+      "description": "eight invalid",
+      "title": "eight",
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Carousel",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

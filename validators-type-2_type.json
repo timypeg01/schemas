@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/validators-type-2.json",
+  "settings": {
+    "name": "QA validators-type-2",
+    "label": "validators-type-2",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.australiaforeveryone.com.au/images/tas-devil3.jpg"
+      }
+    ]
+  }
+}

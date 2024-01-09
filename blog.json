@@ -1,0 +1,15 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/blog.json",
+  "title": "Simple",
+  "description": "Simple",
+  "type": "object",
+  "properties": {
+    "text": {
+      "title": "String",
+      "description": "A description",
+      "type": "string"
+    },
+    "chooser": { "$ref": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/linked-chooser.json" }
+  }
+}

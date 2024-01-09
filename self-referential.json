@@ -1,0 +1,39 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/self-referential.json",
+  "title": "Chooser",
+  "description": "Chooser description",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "text": {
+      "title": "title",
+      "description": "A title",
+      "type": "string"
+    },
+    "chooser": {
+      "title": "Chooser",
+      "description": "A chooser",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "title",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/self-referential.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

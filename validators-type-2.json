@@ -1,0 +1,150 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/validators-type-2.json",
+  "title": "All format validations",
+  "description": "All supported format validations",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "simple_slot": {
+      "title": "simple slot container",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "slot",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "enum_boolean": {
+      "title": "Enum of Boolean",
+      "description": "should accept true only",
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    },
+    "enum_number": {
+      "title": "Enum of Number",
+      "description": "should accept 1, 2, 4, 8, 16",
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ]
+    },
+    "enum_string": {
+      "title": "Enum of Strings",
+      "description": "should accept male or female",
+      "type": "string",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "string_textFormat": {
+      "title": "String with minimum length",
+      "description": "should accept values at least 2 chars and no more than 100",
+      "type": "string",
+      "format": "text",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "string_minLength": {
+      "title": "String with minimum length",
+      "description": "should accept values at least 5 chars",
+      "type": "string",
+      "minLength": 5
+    },
+    "string_maxLength": {
+      "title": "String with maximum length",
+      "description": "should accept values no less than 10 chars",
+      "type": "string",
+      "maxLength": 10
+    },
+    "string_pattern": {
+      "title": "String with pattern validation",
+      "description": "should accept values that match the regex",
+      "type": "string",
+      "pattern": "^[Aa]"
+    },
+    "number_minimum": {
+      "title": "Number with minimum validation",
+      "description": "should accept values >= 5",
+      "type": "number",
+      "minimum": 5
+    },
+    "number_exclusive_minimum": {
+      "title": "Number with exclusive minimum validation",
+      "description": "should accept values > 5",
+      "type": "number",
+      "minimum": 5,
+      "exclusiveMinimum": true
+    },
+    "number_maximum": {
+      "title": "Number with maximum validation",
+      "description": "should accept values <= 5",
+      "type": "number",
+      "maximum": 5
+    },
+    "number_exclusive_maximum": {
+      "title": "Number with exclusive maximum validation",
+      "description": "should accept values < 5",
+      "type": "number",
+      "maximum": 5,
+      "exclusiveMaximum": true
+    },
+    "number_multipleOf": {
+      "title": "Number with multipleOf validation",
+      "description": "should accept values that are a multiple of 2",
+      "type": "number",
+      "multipleOf": 2
+    },
+    "array_minItems": {
+      "title": "Array with minItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 5
+    },
+    "array_maxItems": {
+      "title": "Array with maxItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 5
+    },
+    "required": {
+      "type": "object",
+      "title": "required title",
+      "properties": {
+        "required_property": {
+          "title": "required_property title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "required_property"
+      ]
+    }
+  }
+}

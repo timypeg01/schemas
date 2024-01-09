@@ -1,0 +1,9 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/hack_day_schema.json",
+  "settings": {
+    "label": "hackaday",
+    "icons": [],
+    "visualizations": [],
+    "cards": []
+  }
+}

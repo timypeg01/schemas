@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/test-image-link.json",
+  "settings": {
+    "name": "QA test image link",
+    "label": "image link",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://seohackercdn-seohacker.netdna-ssl.com/wp-content/uploads/2011/07/Link-Searching-800x800.jpg?x68951"
+      }
+    ]
+  }
+}

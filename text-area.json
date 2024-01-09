@@ -1,0 +1,41 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/text-area.json",
+  "title": "Textarea",
+  "description": "textarea description",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "text1": {
+      "title": "text 1",
+      "description": "text 1",
+      "type": "string",
+      "format": "text",
+      "minLength":5,
+      "maxLength": 200
+    },
+    "text2": {
+      "title": "text 2",
+      "description": "text 2",
+      "type": "string",
+      "maxLength": 500
+    },
+    "text3": {
+      "title": "text 3",
+      "description": "text 3",
+      "type": "string",
+      "format": "text",
+      "minLength":2
+    },
+    "text4": {
+      "title": "text 4",
+      "description": "text 4",
+      "type": "string",
+      "format": "text"
+    }
+  }
+}

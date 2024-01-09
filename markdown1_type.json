@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/markdown.json",
+  "settings": {
+    "name": "QA Markdown Example",
+    "label": "Markdown Example",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://i.kinja-img.com/gawker-media/image/upload/s--Fa7wTbqh--/c_fit,fl_progressive,q_80,w_320/17z3k5lawpg2mjpg.jpg"
+      }
+    ]
+  }
+}

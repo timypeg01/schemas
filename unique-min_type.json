@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/unique-min.json",
+  "settings": {
+    "name": "QA unique-min",
+    "label": "unique-min",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://assets.fxnetworks.com/cms/prod/2016/12/simpsonsworld_social_og_bart_1200x1200.jpg
+      }
+    ]
+  }
+}

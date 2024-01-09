@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/localetext.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"propertyName1":{
+			"title": "title",
+			"description": "description",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }
+			]
+		},
+		"propertyName2":{
+			"title": "title",
+			"description": "description",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-image" }
+			]
+		},
+		"propertyName3":{
+			"title": "title",
+			"description": "description",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-image" }
+			]
+		}
+		
+	},
+	"propertyOrder": []
+}

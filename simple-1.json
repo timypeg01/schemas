@@ -1,0 +1,14 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "http://localhost:3005/simple-1.json",
+  "title": "Simple",
+  "description": "Simple",
+  "type": "object",
+  "properties": {
+    "text": {
+      "title": "A title",
+      "description": "A description",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/mixed-content-tests-1.json",
+  "settings": {
+    "name": "QA Mixed Content",
+    "label": "Mixed Content",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://pbs.twimg.com/profile_images/1103891778/logo-twitter.jpg"
+      }
+    ]
+  }
+}

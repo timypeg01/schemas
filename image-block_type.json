@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/image-block.json",
+  "settings": {
+    "name": "QA Image Block",
+    "label": "Image Block",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://moparconnectionmagazine.com/wp-content/uploads/2017/09/free-vector-roadrunner_053395_roadrunner.png"
+      }
+    ]
+  }
+}

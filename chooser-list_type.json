@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser-list.json",
+  "settings": {
+    "name": "QA Chooser list",
+    "label": "list of different choosers",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://vignette3.wikia.nocookie.net/deathbattlefanon/images/1/16/Donald-Duck-4.png/revision/latest?cb=20160321213717"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/testCTS.json",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"example":{
+			"$ref": "http://partial.content2.com#/definitions/text"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/chooser-list-1.json",
+  "settings": {
+    "name": "QA Chooser List 1",
+    "label": "Alt 01 of Chooser Lists",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://www.disneyclips.com/imagesnewb/images/mickey_happy.gif"
+      }
+    ]
+  }
+}

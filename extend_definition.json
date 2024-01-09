@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/extend_definition.json",
+  "title": "Content schema",
+  "description": "Example on how to create a content schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "definitions": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "first": {
+          "type": "string"
+        },
+        "second": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    }
+  },
+  "properties": {
+    "billing_address": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/address"
+        },
+        {
+          "properties": {
+            "first": {
+              "minLength": 5
+            }
+          }
+        }
+      ]
+    }
+  }
+}

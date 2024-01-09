@@ -1,0 +1,327 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/tester.json",
+  "title": "One of each",
+  "description": "All supported format validations",
+  "type": "object",
+  "required": [
+    "enum_number"
+  ],
+  "propertyOrder": [
+    "boolean",
+    "1"
+  ],
+  "properties": {
+    "chooserList": {
+      "title": "Carousel",
+      "description": "Carousel list description",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Chooser list",
+                "enum": [
+                  "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 3
+    },
+    "chooser": {
+      "title": "Chooser",
+      "description": "Chooser description",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "Chooser",
+              "enum": [
+                "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/simple.json"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "string_minLength": {
+      "title": "String with minimum length",
+      "description": "should accept values at least 5 chars",
+      "type": "string",
+      "minLength": 5,
+      "errors": {
+        "minLength": "Custom min length error message"
+      }
+    },
+    "boolean": {
+      "title": "Boolean",
+      "description": "Should accept true/false",
+      "type": "boolean"
+    },
+    "1": {
+      "title": "1",
+      "description": "should accept values at least 5 chars",
+      "type": "string",
+      "minLength": 5,
+      "errors": {
+        "minLength": "Custom min length error message"
+      }
+    },
+    "0": {
+      "title": "0",
+      "description": "should accept values at least 5 chars",
+      "type": "string",
+      "minLength": 5,
+      "errors": {
+        "minLength": "Custom min length error message"
+      }
+    },
+    "string_maxLength": {
+      "title": "String with maximum length",
+      "description": "should accept values no less than 10 chars",
+      "type": "string",
+      "maxLength": 10,
+      "errors": {
+        "maxLength": "Custom max length error message"
+      }
+    },
+    "string_pattern": {
+      "title": "String with pattern validation",
+      "description": "should accept values that match the regex",
+      "type": "string",
+      "pattern": "^[Aa]",
+      "errors": {
+        "pattern": "Custom pattern length error message"
+      }
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri",
+      "title": "URI",
+      "description": "should accept RFC3986 URI"
+    },
+    "date-time": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Date Time",
+      "description": "should accept RFC3339 date-time",
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "email": {
+      "type": "string",
+      "title": "email",
+      "format": "email",
+      "description": "should accept RFC5322 email"
+    },
+    "text_small": {
+      "title": "Text",
+      "description": "should show a text input",
+      "type": "string",
+      "minLength": 5
+    },
+    "text_large": {
+      "title": "Text",
+      "description": "should show a textarea",
+      "type": "string",
+      "maxLength": 500
+    },
+    "number_exclusive_maximum": {
+      "title": "Number with exclusive maximum validation",
+      "description": "should accept values < 5",
+      "type": "number",
+      "maximum": 5,
+      "exclusiveMaximum": true
+    },
+    "number_exclusive_minimum": {
+      "title": "Number with exclusive minimum validation",
+      "description": "should accept values > 5",
+      "type": "number",
+      "minimum": 5,
+      "exclusiveMinimum": true
+    },
+    "number_multipleOf": {
+      "title": "Number with multipleOf validation",
+      "description": "should accept values that are a multiple of 2",
+      "type": "number",
+      "multipleOf": 2
+    },
+    "markdown": {
+      "title": "markdown",
+      "description": "should accept any string value",
+      "type": "string",
+      "format": "markdown"
+    },
+    "text": {
+      "title": "Text",
+      "description": "should accept any string value",
+      "type": "string",
+      "format": "text"
+    },
+    "symbol": {
+      "title": "Symbol",
+      "description": "should accept any string value",
+      "type": "string",
+      "format": "symbol"
+    },
+    "uri_list": {
+      "type": "array",
+      "title": "URI",
+      "description": "should accept RFC3986 URI",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "date-time_list": {
+      "type": "array",
+      "title": "Date Time",
+      "description": "should accept RFC3339 date-time",
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "email_list": {
+      "type": "array",
+      "title": "Email",
+      "description": "should accept RFC5322 email",
+      "items": {
+        "type": "string",
+        "format": "email"
+      }
+    },
+    "markdown_list": {
+      "type": "array",
+      "title": "Markdown",
+      "description": "should accept RFC7763 markdown",
+      "items": {
+        "type": "string",
+        "format": "markdown"
+      }
+    },
+    "enum_array": {
+      "title": "Enum of Array",
+      "description": "should accept multiple ",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "banana",
+          "apple",
+          "orange"
+        ]
+      }
+    },
+    "enum_boolean": {
+      "title": "Enum of Boolean",
+      "description": "should accept true only",
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    },
+    "enum_number": {
+      "title": "Enum of Number",
+      "description": "should accept 1, 2, 4, 8, 16",
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ]
+    },
+    "enum_string": {
+      "title": "Enum of Strings",
+      "description": "should accept male or female",
+      "type": "string",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "number_minimum": {
+      "title": "Number with minimum validation",
+      "description": "should accept values >= 5",
+      "type": "number",
+      "minimum": 5
+    },
+    "number_maximum": {
+      "title": "Number with maximum validation",
+      "description": "should accept values <= 5",
+      "type": "number",
+      "maximum": 5
+    },
+    "array_minItems": {
+      "title": "Array with minItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 5
+    },
+    "array_maxItems": {
+      "title": "Array with maxItems validation",
+      "description": "should accept arrays where the number of items is gte minItems",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 5
+    },
+    "unique_items": {
+      "type": "array",
+      "title": "Unique items",
+      "description": "Should enforce unique items within array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "required": {
+      "title": "inline content required",
+      "type": "object",
+      "properties": {
+        "required": {
+          "title": "required title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "required"
+      ]
+    },
+    "inline_content_array": {
+      "type": "object",
+      "title": "inline content",
+      "properties": {
+        "inline_content_array_property": {
+          "title": "inline content array",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "pretty title",
+            "description": "pretty hint"
+          }
+        }
+      }
+    }
+  }
+}

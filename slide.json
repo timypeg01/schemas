@@ -1,0 +1,19 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/slide.json",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "title": "Simple",
+  "description": "Simple",
+  "type": "object",
+  "properties": {
+    "text": {
+      "title": "A title",
+      "description": "A description",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contentTypeUri": "https://s3-eu-west-1.amazonaws.com/qa-patrick/schemas/content/type/shoppable.json",
+  "settings": {
+    "name": "QA Shoppable",
+    "label": "Shoppable",
+    "icons": [
+      {
+        "size": 256,
+        "url": "http://www.shoppable.com/img/logo.jpg"
+      }
+    ]
+  }
+}
